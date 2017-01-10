@@ -1,0 +1,35 @@
+{
+  "name": "d3v4-testbed",
+  "version": "0.0.1",
+  "description": "Testbed to try things out with d3.js 4.x and ES2015 syntax",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.js:bundle.js --live"
+  },
+  "keywords": [
+    "d3",
+    "es2015"
+  ],
+  "author": "Robert Moestl <moestl.robert@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "d3-selection": "^1.0.3",
+    "d3-selection-multi": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  }
+}
