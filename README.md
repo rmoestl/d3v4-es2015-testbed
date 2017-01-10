@@ -3,6 +3,13 @@
 ## Motivation
 [d3.js version 4.x](https://github.com/d3/d3/blob/master/CHANGES.md) is based on [ES2015 / ES6](https://babeljs.io/learn-es2015/) introducing nice features such as *arrow functions*. At the beginning of 2017 browsers don't fully support the new JavaScript standard. But we like to use ES2015 today, especially because larger frameworks like [Ember]() work with it out of the box.
 
+## Prerequisites
+Granted you already have npm installed on your machine, you'll need two additinal tools before you start:
+- `npm install -g budo`
+- `npm install -g browserify`
+
+In addition you need some development dependencies installed. Since npm is smart enough to install the dependencies declared in `package.json`, we simply call `npm install`.
+
 ## How to run it
 - Simply run `npm run start`
 
