@@ -1,10 +1,10 @@
-import {select, selectAll} from 'd3-selection';
+import * as d3 from './d3-custom';
 import 'd3-selection-multi';
 
-select('#container')
+d3.select('#container')
   .append('svg')
   .attrs({
-    width: '300px',
+    width: '200px',
     height: '200px'
   })
   .style('background-color', '#09F');
