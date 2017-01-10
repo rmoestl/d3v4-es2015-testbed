@@ -16,8 +16,8 @@ In addition you need some development dependencies installed. Since npm is smart
 ## How it works
 This small testbed is based on [budo](https://github.com/mattdesl/budo) &mdash; "a dev server for rapid prototyping".
 
-What budo does is to serve your files, thereby transpiling files on the fly with [Browserify](http://browserify.org/) after they've been saved. Moreover it is able to live-reload your changes in the browser.
+What budo does is to serve your files, thereby bundling files on the fly with [Browserify](http://browserify.org/) after they've been saved. Moreover it is able to live-reload your changes in the browser.
 
-Furthermore this testbed uses [Babelify](https://github.com/babel/babelify). Babelify is transforming ES2015 module syntax into Common.js module syntax that is understood by Browserify. Browserify analyzes how modules expressed in Common.js code relate to each other and then produces a bundled JavaScript that can be referenced in a `<script>` tag of a HTML page.
+Furthermore this testbed uses [Babelify](https://github.com/babel/babelify). Whenever budo bundles code with Browserify, Browserify executes the Babelify transformer before. Babelify transpiles ES2015 code (including ES2015 module syntax) into ES5 code (with Common.js module syntax). This way code originally written in ES2015 is understood by Browserify. While bundling, Browserify analyzes how modules relate to each other and then produces a single JavaScript file that can be referenced in a `<script>` tag of a HTML page.
 
-How Babel, Browserify and Babelify relate can be read at <http://egorsmirnov.me/2015/05/25/browserify-babelify-and-es6.html>.
+How Babel, Browserify and Babelify work together can be read at <http://egorsmirnov.me/2015/05/25/browserify-babelify-and-es6.html>.
